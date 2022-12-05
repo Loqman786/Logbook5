@@ -1,0 +1,32 @@
+﻿<h3>ProductList</h3>
+
+@foreach(Product product in Products)
+{
+    <div class="card w-50">
+        <div class="card-header">
+            Audi Cars
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Cars @product.Id: @product.Name</h5>
+            <p class="card-text">@product.Description</p>
+            <blockquote class="card-text"><strong>£@product.Price</strong></blockquote>
+
+            @if(DisplayBuyButton)
+            {
+                <a href="#" class="btn btn-primary">Buy</a>
+            }
+        
+        </div>
+    </div>
+    
+   
+}
+@code {
+
+    [EditorRequired]
+    [Parameter]
+    public List<Product> Products { get; set; } = ProductService.Products.ToList();
+
+    [Parameter]
+    public bool DisplayBuyButton { get; set; } = true;
+}
