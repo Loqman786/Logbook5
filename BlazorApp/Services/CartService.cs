@@ -1,9 +1,44 @@
 ﻿using BlazorApp.Models;
+using Microsoft.EntityFrameworkCore.Storage;
+using System.Reflection.Metadata.Ecma335;
 
 namespace BlazorApp.Services
 {
     public class CartService
     {
-        public List<Product> SelectedItems { get; set; } = new List<Product>();
+        public static List<ShoppingItem> SelectedItems { get; set; } = new List<ShoppingItem>();
+
+        public void AddProductToCart(int productid)
+        {
+         
+
+            if(productInCart(productid) is false)
+            {
+                var product = ProductService.Products.First(p => p.Id == (productid));
+
+                ShoppingItem item = new ShoppingItem();
+
+                item.Product = product;
+                item.PurchasePrice = product.Price;
+
+
+                SelectedItems.Add(item);
+                Console.WriteLine(SelectedItems.Count);
+            }
+        }
+        
+        private bool productInCart(int productid)
+        {
+            foreach (ShoppingItem item in SelectedItems)
+            {
+                if (item.Product.Id == productid)
+                {
+                    item.Quantity++;
+                    return true;
+                }
+            }
+            return false;
+        } 
+        
     }
 }

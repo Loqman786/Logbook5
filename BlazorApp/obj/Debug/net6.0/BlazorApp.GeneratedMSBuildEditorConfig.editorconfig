@@ -20,6 +20,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/moham/OneDrive/Documents/University/C550/Logbooks/Logbook 5/Logbook5/BlazorApp/Pages/CartView.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydFZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/OneDrive/Documents/University/C550/Logbooks/Logbook 5/Logbook5/BlazorApp/Pages/Checkout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/moham/OneDrive/Documents/University/C550/Logbooks/Logbook 5/Logbook5/BlazorApp/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +46,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/moham/OneDrive/Documents/University/C550/Logbooks/Logbook 5/Logbook5/BlazorApp/Shared/ProductList.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFByb2R1Y3RMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/OneDrive/Documents/University/C550/Logbooks/Logbook 5/Logbook5/BlazorApp/Shared/ProductView.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFByb2R1Y3RWaWV3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/moham/OneDrive/Documents/University/C550/Logbooks/Logbook 5/Logbook5/BlazorApp/Shared/ShoppingCartList.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNob3BwaW5nQ2FydExpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/moham/OneDrive/Documents/University/C550/Logbooks/Logbook 5/Logbook5/BlazorApp/Shared/SurveyPrompt.razor]

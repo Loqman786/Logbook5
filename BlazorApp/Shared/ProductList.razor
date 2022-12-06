@@ -1,32 +1,17 @@
-﻿<h3>ProductList</h3>
+﻿@*Ui Section*@
 
-@foreach(Product product in Products)
+<h3> Product List</h3>
+
+@foreach(Product item in products)
 {
-    <div class="card w-50">
-        <div class="card-header">
-            Audi Cars
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Cars @product.Id: @product.Name</h5>
-            <p class="card-text">@product.Description</p>
-            <blockquote class="card-text"><strong>£@product.Price</strong></blockquote>
-
-            @if(DisplayBuyButton)
-            {
-                <a href="#" class="btn btn-primary">Buy</a>
-            }
-        
-        </div>
-    </div>
-    
-   
+    <ProductView product="item"></ProductView>
 }
-@code {
+
+@*Code Section*@
+@code
+{
 
     [EditorRequired]
     [Parameter]
-    public List<Product> Products { get; set; } = ProductService.Products.ToList();
-
-    [Parameter]
-    public bool DisplayBuyButton { get; set; } = true;
+    public List<Product> products { get; set; } = ProductService.Products.ToList();
 }

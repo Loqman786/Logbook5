@@ -1,0 +1,26 @@
+﻿<h3>Shopping Cart List</h3>
+
+<div class="col-4">
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th class="text-Centre">Quality</th>
+            <th class="text-center">Price</th>
+            <th>Action</th>
+       </tr>
+       @foreach (ShoppingItem item in Items)
+       {
+           //Display Shopping item as table row
+       }
+
+     </table>
+</div>
+
+@*Code Section*@
+@code
+{
+
+    [EditorRequired]
+    [Parameter]
+    public List<ShoppingItem> Items { get; set; } = CartService.SelectedItems.ToList();
+}
