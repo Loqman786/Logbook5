@@ -10,9 +10,7 @@ namespace BlazorApp.Services
 
         public void AddProductToCart(int productid)
         {
-         
-
-            if(productInCart(productid) is false)
+            if(ProductInCart(productid) is false)
             {
                 var product = ProductService.Products.First(p => p.Id == (productid));
 
@@ -27,7 +25,7 @@ namespace BlazorApp.Services
             }
         }
         
-        private bool productInCart(int productid)
+        private bool ProductInCart(int productid)
         {
             foreach (ShoppingItem item in SelectedItems)
             {

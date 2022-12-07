@@ -75,3 +75,5 @@ C:\Users\moham\OneDrive\Documents\University\C550\Logbooks\Logbook 5\Logbook5\Bl
 C:\Users\moham\OneDrive\Documents\University\C550\Logbooks\Logbook 5\Logbook5\BlazorApp\obj\Debug\net6.0\BlazorApp.pdb
 C:\Users\moham\OneDrive\Documents\University\C550\Logbooks\Logbook 5\Logbook5\BlazorApp\obj\Debug\net6.0\BlazorApp.genruntimeconfig.cache
 C:\Users\moham\OneDrive\Documents\University\C550\Logbooks\Logbook 5\Logbook5\BlazorApp\obj\Debug\net6.0\ref\BlazorApp.dll
+C:\Users\moham\OneDrive\Documents\University\C550\Logbooks\Logbook 5\Logbook5\BlazorApp\bin\Debug\net6.0\package-lock.json
+C:\Users\moham\OneDrive\Documents\University\C550\Logbooks\Logbook 5\Logbook5\BlazorApp\bin\Debug\net6.0\package.json

@@ -1,26 +1,50 @@
-﻿<h3>Shopping Cart List</h3>
+﻿@using BlazorApp.Services
+@* UI Section*@
 
-<div class="col-4">
+<h3>You have @Items.Count items in your shopping cart</h3>
+
+<br />
+<div class="col-7">
     <table class="table table-bordered">
         <tr>
             <th>Name</th>
-            <th class="text-Centre">Quality</th>
+            <th class="text-center">Quantity</th>
             <th class="text-center">Price</th>
-            <th>Action</th>
+            <th>Actions</th>
        </tr>
        @foreach (ShoppingItem item in Items)
        {
-           //Display Shopping item as table row
-       }
+            <ItemView Item="@item" OnQuantityChanged="OnQuantityChanged"></ItemView>
+        }
+       <tfoot>
+       <tr>
+           <th Colspan="3" style="text-align:end">Total Cost</th>
+           <th>@totalCost.ToString("c")</th>
+       </tr>
+       </tfoot>
 
      </table>
 </div>
 
 @*Code Section*@
-@code
-{
+@code {
+
+    private decimal totalCost { get; set; }
 
     [EditorRequired]
     [Parameter]
     public List<ShoppingItem> Items { get; set; } = CartService.SelectedItems.ToList();
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnItemsChanged { get; set; }
+
+    protected override void OnInitialized()
+    {
+        OnQuantityChanged();
+    }
+
+    private void OnQuantityChanged()
+    {
+        totalCost = @Items.Sum(item => item.PurchasePrice * item.Quantity);
+    }
 }

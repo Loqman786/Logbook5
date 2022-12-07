@@ -1,30 +1,12 @@
 ﻿@page "/CartView"
-@using BlazorApp.Services
-@* UI Section*@
+
+@inject CartService CartService 
 
 <h3>Shopping Cart List</h3>
-<h3>You have @Items.Count in your shopping cart</h3>
 
-<div class="col-4">
-    <table class="table table-bordered">
-        <tr>
-            <th>Name</th>
-            <th class="text-center">Quantity</th>
-            <th class="text-center">Price</th>
-            <th>Actions</th>
-        </tr>
-        @foreach (ShoppingItem item in Items)
-        {
-            // Display shopping item
-            Console.WriteLine(item.Product.Name);
-        }
-
-    </table>
-</div>
+<ShoppingCartList Items="CartService.SelectedItems"></ShoppingCartList>
 
 @* Code Section *@
 @code {
-    [EditorRequired]
-    [Parameter]
-    public List<ShoppingItem> Items { get; set; } = CartService.SelectedItems.ToList();
+    private int itemCount = 0;
 }
